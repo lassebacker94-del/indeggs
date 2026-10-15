@@ -85,6 +85,53 @@ section p{color:var(--mute);margin:0 0 16px;max-width:64ch}
 .dt{margin-top:14px}.dt summary{cursor:pointer;color:var(--mute)}
 section ul{color:var(--mute);margin:0 0 12px;padding-left:1.2em;max-width:64ch}
 section li{margin:0 0 4px}
+[hidden]{display:none!important}
+.cr{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+@media(max-width:860px){.cr{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.cr{grid-template-columns:1fr}}
+.cc{border:1px solid var(--bd);border-radius:18px;padding:14px;background:var(--seg);display:grid;gap:10px;align-content:start}
+.cc .hd{display:flex;align-items:center;gap:12px}
+.cc .hd img{width:84px;height:auto;flex:none;filter:drop-shadow(0 6px 6px rgba(0,0,0,.25))}
+.cc .hd b{display:block;font:800 1.2rem "Bricolage Grotesque",sans-serif;color:var(--ink)}
+.cc .hd span{display:block;color:var(--mute);font-size:.84rem;line-height:1.35}
+.tray{display:grid;gap:4px;padding:10px;border-radius:14px;background:linear-gradient(#dcd3c1,#c3b8a2);box-shadow:inset 0 2px 6px rgba(0,0,0,.25)}
+.cell{display:grid;place-items:center;height:56px;background:radial-gradient(ellipse 45% 40% at 50% 62%,rgba(90,76,52,.38),rgba(90,76,52,0) 100%)}
+.ce{display:grid;place-items:center;border-radius:50% 50% 50% 50%/62% 62% 38% 38%;font:800 .68rem "Bricolage Grotesque",sans-serif;color:#1a2030;background-image:radial-gradient(circle at 34% 26%,rgba(255,255,255,.6),rgba(255,255,255,0) 55%);box-shadow:inset -3px -4px 6px rgba(0,0,0,.16),0 4px 6px -3px rgba(0,0,0,.45)}
+.mix{display:flex;flex-wrap:wrap;gap:6px}
+.mix span{padding:2px 10px;border-radius:999px;font-size:.82rem;font-weight:600;color:#1a2030}
+.cc .l2{font-size:.8rem;font-weight:600;color:var(--mute);margin-top:4px}
+.ce.gh{width:30px;height:37px;background:none;box-shadow:none;border:1.5px dashed var(--mute);opacity:.6}
+.cmpl{font-size:.92rem;color:var(--ink);margin-top:2px}
+.cmpl em{font-style:normal;font-weight:600;padding:1px 9px;border-radius:999px;margin-left:4px;white-space:nowrap}
+.cmpl em.up{background:#10b981;color:#052e1f}
+.cmpl em.dn{background:#ef4444;color:#fff}
+.flipbar{margin:12px 0 4px}
+.fb2{font:inherit;font-weight:600;font-size:.9rem;border:0;background:var(--ink);color:var(--bg);padding:9px 18px;border-radius:999px;cursor:pointer}
+.fb2:focus-visible,.fl:focus-visible{outline:3px solid var(--yolk);outline-offset:3px}
+.fl{perspective:1400px;cursor:pointer;border-radius:18px}
+.fi{display:grid;position:relative;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.3,.8,.3,1)}
+.fl.on .fi{transform:rotateY(180deg)}
+.fc,.bk{grid-area:1/1;-webkit-backface-visibility:hidden;backface-visibility:hidden;border-width:2px}
+.bk{transform:rotateY(180deg)}
+.bk.bad{border-color:#ef4444;background:rgba(239,68,68,.1)}
+.bk.mid{border-color:#f97316;background:rgba(249,115,22,.1)}
+.bk.good{border-color:#10b981;background:rgba(16,185,129,.12)}
+.tg{justify-self:start;padding:3px 12px;border-radius:999px;font-weight:700;font-size:.78rem;letter-spacing:.08em}
+.tg.ex{background:#3b82f6;color:#fff}
+.tg.ac{background:var(--ink);color:var(--bg)}
+.st{border-radius:12px;padding:8px 12px;display:grid;gap:2px;font-size:.88rem}
+.st b{font:800 1.15rem "Bricolage Grotesque",sans-serif}
+.st.bad{background:#ef4444;color:#fff}
+.st.mid{background:#f97316;color:#2a1200}
+.st.good{background:#10b981;color:#052e1f}
+.cn{display:grid;gap:2px;font-size:.88rem;color:var(--ink)}
+.cn .rd{color:#dc2626;font-weight:600}
+.cn .gr{color:#059669;font-weight:600}
+.hint{font-size:1.05rem;font-weight:600;color:var(--ink)}
+.ce.lo{box-shadow:0 0 0 3px #ef4444,inset -3px -4px 6px rgba(0,0,0,.16)}
+.ce.hi{box-shadow:0 0 0 3px #10b981,inset -3px -4px 6px rgba(0,0,0,.16)}
+.e.kr{box-shadow:0 0 0 2px #ef4444}
+.e.kg{box-shadow:0 0 0 2px #10b981}
 .lv{color:var(--ink);font-size:1.12rem;line-height:1.65;max-width:68ch}
 .lv .hl{font-weight:700}
 .pill{display:inline-block;padding:1px 12px;border-radius:999px;background:var(--seg);color:var(--ink);font-weight:600;font-size:.92em}
@@ -184,7 +231,7 @@ footer{text-align:center;color:var(--mute);font-size:.84rem;padding:32px 0 0}
 </head>
 <body>
 <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
-<nav><b>IndEggs</b><a href="#merker">Merker</a><a href="#vekt">Vekt</a><a href="#storrelse">Størrelse</a><a href="#pris">Pris</a><a href="#spiselig">Spiselig</a><a href="#tabell">Tabell</a></nav>
+<nav><b>IndEggs</b><a href="#merker">Merker</a><a href="#vekt">Vekt</a><a href="#storrelse" hidden>Størrelse</a><a href="#pris">Pris</a><a href="#spiselig">Spiselig</a><a href="#tabell">Tabell</a></nav>
 <main>
 <div class="hero">
  <div>
@@ -199,8 +246,7 @@ footer{text-align:center;color:var(--mute);font-size:.84rem;padding:32px 0 0}
 
 <section id="hvorfor" class="glass">
  <h2>Hvorfor?</h2>
- <p class="intro">Jeg liker egg og jeg liker ikke å bli lurt. Jeg liker veldig godt å gjennomskue feller i matbutikken. Chipsposer med altfor mye luft? 49,90 kr for fire tynne skiver med parmaskinke? Glem det. Lurer ikke meg. Jeg har nemlig et kjært våpen: kilopris. Jeg elsker kilopris. Men hva skjer når noe så urokkelig som kilopris begynner å vakle så smått? Det hele startet med et simpelt spørsmål:</p>
- <p class="q">Får man mest spiselig egg (minst skall/per kilo egg) hvis man kjøper store eller små egg?</p>
+ <p class="intro">Jeg liker egg og jeg liker ikke å bli lurt. Jeg liker veldig godt å gjennomskue feller i matbutikken. Chipsposer med altfor mye luft? 49,90 kr for fire tynne skiver med parmaskinke? Glem det. Lurer ikke meg. Jeg har nemlig et kjært våpen: kilopris. Jeg elsker kilopris. Men hva skjer når noe så urokkelig som kilopris begynner å vakle så smått?</p>
 </section>
 
 <section id="merker" class="glass">
@@ -229,12 +275,20 @@ footer{text-align:center;color:var(--mute);font-size:.84rem;padding:32px 0 0}
 <section id="vekt" class="glass">
  <h2>Hva måler jeg?</h2>
  <p style="color:var(--ink);max-width:none">Hvert egg ble veid på en nøyaktig vekt med oppløsning ned til 0.1 gram. Hvert punkt under representerer et gjennomsnitt av tre veiinger for hvert egg fra de forskjellige merkene. De stiplede linjene representerer det spennet produsentene sier at eggene skal ligge i.</p>
- <div class="bar" id="b1"></div>
  <div class="key" id="key1"><span><i class="pt"></i>Ett egg</span><span><i class="ln"></i>Snitt for merket</span><span><i class="ln dash"></i>Størrelsesgrensene produsenten oppgir (laveste og høyeste vekt)</span></div>
  <div class="chart"><canvas id="c1"></canvas></div>
 </section>
 
-<section id="storrelse" class="glass">
+<section id="forventer" class="glass">
+ <h2>Hva forventer forbrukeren å få?</h2>
+ <p style="color:var(--ink);max-width:none">Slik ser pakkene ut hvis de inneholder det butikkens kilopris forutsetter: samme antall egg og samme totalvekt. Eggene er tegnet i farge og størrelse etter hvilken størrelse de har. Trykk på et kort for å snu det og se eggene vi faktisk veide.</p>
+ <div class="key" id="crkey"></div>
+ <div class="flipbar"><button class="fb2" id="flipall" type="button">Vis faktisk for alle</button></div>
+ <div class="cr" id="cartons"></div>
+ <p class="note">Hos Prima gikk ett egg i gulvet før veiing og er tegnet som et tomt omriss, og faktisk pakkevekt regner 18 egg med snittet av de 17 veide.</p>
+</section>
+
+<section id="storrelse" class="glass" hidden>
  <h2>Hva merkene oppgir mot hva eggene faktisk er</h2>
  <div class="key" id="szkey"></div>
  <div class="szs" id="sz"></div>
@@ -246,6 +300,7 @@ footer{text-align:center;color:var(--mute);font-size:.84rem;padding:32px 0 0}
  <p class="lr">1. Kolonihagen skriver at de selger deg mellomstore, store og ekstra store egg. I denne stikkprøven er realiteten at du kun har fått mellomstore.</p>
  <p class="lr">2. Eldorado skriver at eggene er mellomstore og store, men også her fikk du kun mellomstore egg i denne stikkprøven. Ingen av de tolv eggene nådde opp til L.</p>
  <p class="lr">3. Prior lover deg kun store egg, men i denne stikkprøven gjelder det faktisk KUN i halvparten av tilfellene. På tide å kalibrere vekta, Prior?</p>
+ <p class="lr">4. Vi må ta et øyeblikk for å hylle First Price. De er de eneste som antar "worst case" for forbrukeren når de regner eggemasse. Produsentene vil jo ha antatt eggemasse så høy som mulig, for det gir lavest kilopris, men First Price legger altså til grunn at du kun får små egg, selv om de kunne tatt et snitt av små og mellomstore egg. I praksis betyr dette at du som regel vil få mer egg for pengene! Fortsett sånn, FirstPrice.</p>
 </section>
 
 <section id="pris" class="glass">
@@ -276,11 +331,12 @@ footer{text-align:center;color:var(--mute);font-size:.84rem;padding:32px 0 0}
 
 <section class="glass">
  <h2>Forstår du ingenting?</h2>
- <p style="color:var(--ink);max-width:none;font-size:1.3rem;line-height:1.5;margin:0">Flott, det samme gjelder forbrukerne! Men hva skjedde egentlig med det opprinnelige spørsmålet? Får man mest spiselig egg av store eller små egg? Mine data viser at det <b>spiller ingen rolle</b>. Skallet utgjør ca. 13% av den totale vekten uavhengig av størrelse. Jaja, på tide å lage litt eggepai...</p>
+ <p style="color:var(--ink);max-width:none;font-size:1.3rem;line-height:1.5;margin:0">Flott, det samme gjelder forbrukerne! Huk tak i meg så skal jeg prøve å forklare. Jaja, på tide å lage litt eggepai...</p>
 </section>
 
-<details id="spiselig" class="glass fold"><summary><h2>Hvor mye er spiselig?</h2></summary>
+<details id="spiselig" class="glass fold"><summary><h2>Bonus: Får man mest % spiselig egg om man kjøper store eller små egg?</h2></summary>
  <p>Alle merker ligger nær linjen for 87 %. Skallet veier 7-8 gram uansett merke.</p>
+ <p style="color:var(--ink);max-width:none">Får man mest spiselig egg av store eller små egg? Mine data viser at det <b>spiller ingen rolle</b>. Skallet utgjør ca. 13% av den totale vekten uavhengig av størrelse.</p>
  <div class="chart"><canvas id="c3"></canvas></div>
 </details>
 
@@ -375,7 +431,7 @@ function seg(id,opts,cb){
 
 
 let c1;
-seg('b1',['Total vekt','Uten skall'],m=>{
+(m=>{
  if(c1)c1.destroy();document.getElementById('key1').style.display=m==0?'flex':'none';
  const ds=[];
  D.forEach((d,i)=>{
@@ -388,7 +444,7 @@ seg('b1',['Total vekt','Uten skall'],m=>{
  c1=new Chart('c1',{type:'scatter',data:{datasets:ds},options:{...base,
   scales:{x:{min:-.6,max:5.6,grid:{display:false},ticks:{stepSize:1,callback:v=>B[v]??''}},y:{title:{display:true,text:'gram'}}},
   plugins:{legend:{display:false},tooltip:{filter:t=>!/^(snitt|grense)/.test(t.dataset.label),callbacks:{title:()=>'',label:t=>`${t.dataset.label}: ${f(t.parsed.y)} g`}}}}});
-});
+})(0);
 
 new Chart('c3',{type:'scatter',data:{datasets:[
  ...D.map((d,i)=>({label:B[i],data:d.t.map((t,k)=>d.e[k]==null?null:{x:t,y:d.e[k]}).filter(Boolean),backgroundColor:C[i]+'cc',pointRadius:6,pointHoverRadius:9})).filter(s=>s.data.length),
@@ -397,6 +453,41 @@ new Chart('c3',{type:'scatter',data:{datasets:[
  plugins:{tooltip:{callbacks:{label:t=>t.dataset.label.startsWith('87')?'87 % spiselig':`${t.dataset.label}: ${f(t.parsed.x)} g total, ${f(t.parsed.y)} g uten skall`}}}}});
 
 
+(()=>{const CLB={S:[0,53],M:[53,63],L:[63,73],XL:[73,999]},COL={S:'#7dd3fc',M:'#86efac',L:'#fcd34d',XL:'#c4b5fd'},RK={S:0,M:1,L:2,XL:3};
+let note='';
+const fmt=v=>String(Math.round(v)).replace(/\B(?=(\d{3})+(?!\d))/g,'\u00a0');
+const zc=t=>t<53?'S':t<63?'M':t<73?'L':'XL';
+const cell=(c,m,k)=>{const w=Math.min(40,Math.max(26,28+(m-50)*0.385));return `<div class="cell"><i class="ce ${k||''}" title="${c} ca. ${Math.round(m)} g" style="background-color:${COL[c]};width:${w.toFixed(1)}px;height:${(w*1.22).toFixed(1)}px">${c}</i></div>`};
+const ghost='<div class="cell"><i class="ce gh" title="Gikk i bakken, ikke veid"></i></div>';
+const tray=(x,cols)=>`<div class="tray" style="grid-template-columns:repeat(${cols},1fr)">${x}</div>`;
+document.getElementById('crkey').innerHTML=[['S','under 53 g'],['M','53-63 g'],['L','63-73 g'],['XL','73 g og over']].map(([c,g])=>`<span><i class="e sm c${c}">${c}</i>${g}</span>`).join('')+'<span><i class="e sm cM kr"></i>Mindre enn forventet</span><span><i class="e sm cM kg"></i>St\u00f8rre enn forventet</span>';
+document.getElementById('cartons').innerHTML=[3,1,0,2,4,5].map(i=>{
+ const n=PRICE[i][0],W=STORE[i]*1000,a=W/n,cs=OK[i].slice();
+ const rg=c=>{const lo=c=='S'?R[i][0]:Math.max(CLB[c][0],R[i][0]),hi=c=='XL'?R[i][1]:Math.min(CLB[c][1],R[i][1]);return[lo,hi,(lo+hi)/2]};
+ let cnt;
+ if(cs.length==1)cnt=[n];
+ else if(cs.length==2){const m0=rg(cs[0])[2],m1=rg(cs[1])[2],f2=Math.min(1,Math.max(0,(a-m0)/(m1-m0))),hi=Math.round(f2*n);cnt=[n-hi,hi]}
+ else{const b=Math.floor(n/cs.length),r=n-b*cs.length;cnt=cs.map(()=>b);for(let k=0;k<r;k++)cnt[[1,0,2][k]]++}
+ const sum=cnt.reduce((s,c,k)=>s+c*rg(cs[k])[2],0),sc=W/sum;
+ const info=cs.map((c,k)=>{const [lo,hi,mid]=rg(c);return{c,n:cnt[k],m:Math.min(hi,Math.max(lo,mid*sc))}}).filter(x=>x.n>0).sort((x,y)=>y.m-x.m);
+ if(cs.includes('S')&&cs.includes('M')&&info.length==1)note=`For ${B[i]} tilsvarer butikkens vekt (${Math.round(W)} g) ${f(a,1)} g per egg. Det ligger helt nederst i spennet, s\u00e5 pakken forventes \u00e5 best\u00e5 av nesten bare sm\u00e5 egg. `;
+ const cols=n==10?5:6;
+ const expL=info.flatMap(x=>Array(x.n).fill(x));
+ const exp=expL.map(x=>cell(x.c,x.m)).join('');
+ const ts=D[i].t.slice().sort((x,y)=>y-x);
+ let lo=0,hi=0;
+ const act=ts.map((t,k)=>{const c=zc(t),e=expL[k]?expL[k].c:c,d=RK[c]-RK[e];if(d<0)lo++;if(d>0)hi++;return cell(c,t,d<0?'lo':d>0?'hi':'')}).join('')+ghost.repeat(n-ts.length);
+ const fw=n*ST[i].mean,d=(fw/W-1)*100,st=lo>0?'bad':d>=0?'good':'mid';
+ const ttl={bad:'Stemmer ikke',mid:'Litt under forventet',good:'Mer for pengene'}[st];
+ const cnts=(lo?`<span class="rd">${lo} av ${n} egg er mindre enn forventet</span>`:'')+(hi?`<span class="gr">${hi} av ${n} egg er st\u00f8rre enn forventet</span>`:'')+(!lo&&!hi?'<span>Alle eggene har forventet st\u00f8rrelse</span>':'');
+ const hd=`<div class="hd"><img src="${TH[i]}" alt=""><div><b>${B[i]}</b><span>Oppgitt: ${LBL[i]}</span></div></div>`;
+ return `<div class="fl" role="button" tabindex="0" aria-pressed="false" aria-label="Snu kortet for ${B[i]}"><div class="fi"><div class="fc cc"><span class="tg ex">FORVENTET</span>${hd}${tray(exp,cols)}<div class="cmpl">Forventet pakkevekt: <b>${fmt(W)} g</b></div><div class="hint">Trykk for \u00e5 se hva vi faktisk fant \u21bb</div></div><div class="bk cc ${st}"><span class="tg ac">FAKTISK</span>${hd}<div class="st ${st}"><b>${ttl}</b><span>${fmt(fw)} g mot forventet ${fmt(W)} g (${d>=0?'+':'\u2212'}${f(Math.abs(d))} %)</span></div>${tray(act,cols)}<div class="cn">${cnts}</div><div class="hint">Trykk for \u00e5 snu tilbake \u21bb</div></div></div></div>`}).join('');
+const cards=[...document.querySelectorAll('#cartons .fl')],fa=document.getElementById('flipall');
+const setOn=(el,on)=>{el.classList.toggle('on',on);el.setAttribute('aria-pressed',String(on));el.querySelector('.fc').setAttribute('aria-hidden',String(on));el.querySelector('.bk').setAttribute('aria-hidden',String(!on))};
+const sync=()=>{fa.textContent=cards.every(c=>c.classList.contains('on'))?'Vis forventet for alle':'Vis faktisk for alle'};
+cards.forEach(el=>{setOn(el,false);el.onclick=()=>{setOn(el,!el.classList.contains('on'));sync()};el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();el.onclick()}}});
+fa.onclick=()=>{const on=!cards.every(c=>c.classList.contains('on'));cards.forEach(c=>setOn(c,on));sync()};
+})();
 document.getElementById('spiselig').addEventListener('toggle',()=>{const c=Chart.getChart('c3');if(c)c.resize()});
 document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{const d=document.querySelector(a.getAttribute('href'));if(d&&d.tagName==='DETAILS')d.open=true}));
 (()=>{const [n,p]=PRICE[4],ref=STORE[4]*1000,per=ref/n,kp=w=>p/(w/1000);
